@@ -1,0 +1,24 @@
+
+
+
+.nav-bar{
+    height: 6vh;
+    ul {
+        display: inline-flex;
+        li{
+            list-style: none;
+            padding-right: 15px;
+          a{  text-decoration: none;
+          }
+        }
+    }
+}
+
+// nav{
+//     background: map-get($mat-pink,600);
+//     height: 8vh;
+// }
+
+.example-spacer {
+    flex: 1 1 auto;
+  }

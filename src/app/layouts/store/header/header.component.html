@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="nav-bar">
+    <button mat-icon-button fxHide.gt-xs="true">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div fxHide.lt-sm="true">
+      <ul>
+        <li><a mat-button  routerLink="/customers">Customers</a></li>
+        <li><a mat-button  routerLink="/products">Products</a></li>
+      </ul>
+    </div>
+    <span class="example-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon matBadge="15" matBadgeColor="accent">shopping_cart</mat-icon>
+    </button>
+  </mat-toolbar>
