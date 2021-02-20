@@ -43,6 +43,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ModalComponent } from './modal/modal.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -92,7 +94,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     PortalModule,
     ScrollingModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+    ModalComponent
+  ],
+  declarations: [ModalComponent]
 })
 export class SharedModule { }

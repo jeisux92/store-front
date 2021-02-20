@@ -22,8 +22,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MainComponent
   ],
   imports: [
-    SharedModule,
     BrowserModule,
+    SharedModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
