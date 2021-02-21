@@ -2,30 +2,18 @@
     <h1>Productos</h1>
 
     <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="dataSource">
-
-            <!-- Position Column -->
-            <ng-container matColumnDef="position">
-                <th mat-header-cell *matHeaderCellDef> No. </th>
-                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-            </ng-container>
+        <table mat-table [dataSource]="dataSource">  
 
             <!-- Name Column -->
             <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
                 <td mat-cell *matCellDef="let element"> {{element.name}} </td>
             </ng-container>
 
-            <!-- Weight Column -->
-            <ng-container matColumnDef="weight">
-                <th mat-header-cell *matHeaderCellDef> Weight </th>
-                <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-            </ng-container>
-
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="symbol">
-                <th mat-header-cell *matHeaderCellDef> Symbol </th>
-                <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            <!-- Value Column -->
+            <ng-container matColumnDef="unitValue">
+                <th mat-header-cell *matHeaderCellDef> Valor </th>
+                <td mat-cell *matCellDef="let element"> {{element.unitValue}} </td>
             </ng-container>
 
 
@@ -43,7 +31,7 @@
     </div>
 
     <modal *ngIf="isModalActive">
-        <product (cancelBtn)="isModalActive=false"></product>
+        <product (onCreated)="onProductCreated($event)" (cancelBtn)="isModalActive=false"></product>
     </modal>
 
 

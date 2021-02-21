@@ -6,6 +6,7 @@ import { CustomersComponent } from './customers.component';
 import { SharedModule } from '../shared/shared.module';
 import { CustomerComponent } from './customer/customer.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CustomersService } from '../services/customers.service';
 
 
 @NgModule({
@@ -15,6 +16,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CustomersRoutingModule,
     FlexLayoutModule,
     SharedModule
+  ],
+  providers:[
+    CustomersService
   ]
 })
 export class CustomersModule { }

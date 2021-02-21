@@ -1,18 +1,18 @@
 <div class="product">
     <mat-card>
-        <mat-card-content>
+        <mat-card-content [formGroup]="productForm">
             <div>
                 <div>
                     <div>
                         <mat-form-field appearance="standard">
                             <mat-label>Nombre del producto</mat-label>
-                            <input matInput>
+                            <input matInput formControlName="name">
                         </mat-form-field>
                     </div>
                     <div>
                         <mat-form-field appearance="standard" fxFlex>
                             <mat-label>Valor unitario</mat-label>
-                            <input matInput>
+                            <input matInput formControlName="unitValue">
                         </mat-form-field>
                     </div>
                 </div>
@@ -20,7 +20,7 @@
             <div fxLayout="row" fxLayoutAlign="space-between">
 
                 <button mat-raised-button (click)="cancel()">Cancelar</button>
-                <button mat-raised-button color="primary">Guardar</button>
+                <button mat-raised-button (click)="save()" [disabled]="!productForm.valid" color="primary">Guardar</button>
             </div>
         </mat-card-content>
     </mat-card>
