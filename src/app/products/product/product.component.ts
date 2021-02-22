@@ -16,7 +16,7 @@ export class ProductComponent implements OnInit {
   })
 
   @Output() cancelOperation = new EventEmitter<void>();
-  @Output() onCreated = new EventEmitter<boolean>();
+  @Output() onCreated = new EventEmitter<void>();
 
   constructor(private productsService:ProductsService) { }
 
@@ -29,8 +29,8 @@ export class ProductComponent implements OnInit {
   save():void{
     let product =<Product> this.productForm.getRawValue()
     this.productsService.createCustomer(product).subscribe({
-      complete:()=>this.onCreated.emit(true),
-      error:()=>this.onCreated.emit(false),
+      complete:()=>this.onCreated.emit(),
+      error:()=>this.onCreated.emit(),
     })
   }
 }

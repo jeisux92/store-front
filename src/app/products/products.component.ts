@@ -15,8 +15,8 @@ import { ProductsService } from '../services/products.service';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit, AfterViewInit {
- 
-  constructor(private productsService :ProductsService){}
+
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
     this.getProducts();
@@ -24,10 +24,10 @@ export class ProductsComponent implements OnInit, AfterViewInit {
 
   getProducts() {
     this.productsService.getProducts().subscribe({
-      next:(x:Product[])=>{
-       this.dataSource = new MatTableDataSource<Product>(x);
+      next: (x: Product[]) => {
+        this.dataSource = new MatTableDataSource<Product>(x);
       },
-      error:(e)=>{}
+      error: (e) => { }
     })
   }
 
@@ -45,13 +45,8 @@ export class ProductsComponent implements OnInit, AfterViewInit {
     this.isModalActive = true;
   }
 
-  onProductCreated(result:boolean){
+  onProductCreated() {
     this.isModalActive = false;
-    if(result){
-      this.getProducts();
-    }
-    else{
-      alert("Hubo un error creando el cliente")
-    }
+    this.getProducts();
   }
 }
