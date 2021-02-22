@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="nav-bar">
-  <button mat-icon-button fxHide.gt-xs="true">
+  <button mat-icon-button fxHide.gt-xs="true" (click)="showNavBar()">
     <mat-icon>menu</mat-icon>
   </button>
   <div fxHide.lt-sm="true">
@@ -12,6 +12,6 @@
   </div>
   <span class="example-spacer"></span>
   <button mat-icon-button>
-    <mat-icon >local_mall</mat-icon>
+    <mat-icon>local_mall</mat-icon>
   </button>
 </mat-toolbar>

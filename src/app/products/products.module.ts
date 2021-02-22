@@ -6,6 +6,7 @@ import { ProductsComponent } from './products.component';
 import { ProductComponent } from './product/product.component';
 import { SharedModule } from '../shared/shared.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LayoutService } from '../services/layout.service';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ProductsRoutingModule,
     SharedModule,
     FlexLayoutModule
-  ]
+  ],
+  providers: [LayoutService]
 })
 export class ProductsModule { }
