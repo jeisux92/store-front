@@ -31,7 +31,7 @@
   </div>
 
   <modal *ngIf="isModalActive">
-    <product (onCreated)="onProductCreated()" (cancelBtn)="isModalActive=false"></product>
+    <product (onCreated)="onProductCreated()" (cancelOperation)="isModalActive=false"></product>
   </modal>
 
 
