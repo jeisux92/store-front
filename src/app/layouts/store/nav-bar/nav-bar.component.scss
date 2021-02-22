@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+    .sidenav-container{
+        height: 94vh;
+        .draw{
+            background: white;
+            width: 15vh;
+            ul li a{ 
+                width: 100%;
+            }
+        }
+        .content{
+            color: black;
+        }
+      }

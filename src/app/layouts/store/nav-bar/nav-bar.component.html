@@ -1,0 +1,13 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav [opened]="isOpened" mode="push" class="draw" (closedStart)="isOpened=false">
+    <ul>
+      <li><a mat-button color="primary" routerLink="/customers">Clientes</a></li>
+      <li><a mat-button color="primary" routerLink="/products">Productos</a></li>
+      <li><a mat-button color="primary" routerLink="/sales">Vender</a></li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

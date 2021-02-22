@@ -1,0 +1,37 @@
+<mat-card class="sale">
+    <mat-card-content [formGroup]="saleForm"> 
+        <div fxLayout="row wrap" fxLayoutGap="10px">
+          
+             <div fxFlex fxLayout="column" fxLayoutAlign="space-between end">
+                <mat-form-field appearance="standard" >
+                        <mat-label>Nombre del cliente</mat-label>
+                        <mat-select formControlName="customer">
+                        <mat-option *ngFor="let option of customers" [value]="option">
+                            {{option.name}} {{option.lastName}}
+                        </mat-option>
+                        </mat-select>
+                </mat-form-field>
+               <span>Total:</span> 
+            </div>
+             <div fxFlex fxLayout="column" fxLayoutAlign="space-between end">
+          
+                <mat-form-field  appearance="standard" >
+                    <mat-label>Productos</mat-label>
+                    <mat-select formControlName="products" multiple (selectionChange)="onChangeProductList()">
+                      <mat-option *ngFor="let product of productList" [value]="product">
+                       <span>   {{product.name}}</span>
+                        </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <span>{{total}}</span> 
+  
+            </div>
+        
+        </div>
+        <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center end">
+
+            <button mat-raised-button (click)="cancelOperation.emit()">Cancelar</button>
+            <button mat-raised-button (click)="save()" color="primary">Guardar</button>
+        </div>
+    </mat-card-content>
+</mat-card>
